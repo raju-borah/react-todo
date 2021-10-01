@@ -20,7 +20,10 @@ export default function SimpleList({ tasks, onRemoveTask, onEditedTask }) {
               <AssignmentLateIcon />
             </Avatar>
           </ListItemAvatar>
-          <ListItemText primary={el.task} secondary="Jan 9, 2014" />
+          <ListItemText
+            primary={el.task}
+            secondary={`Created On: ${el.date}`}
+          />
           <Button variant="text" onClick={() => onEditedTask(el.id)}>
             <EditIcon />
           </Button>

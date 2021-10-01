@@ -31,8 +31,21 @@ function App() {
         })
       );
     } else {
+      console.log(Date.now());
       setTaskLists((prevList) => {
-        return [...prevList, { task: todoTask, id: Math.random().toString() }];
+        return [
+          ...prevList,
+          {
+            task: todoTask,
+            id: Math.random().toString(),
+            date:
+              new Date().toLocaleString("en-US", {
+                month: "long",
+                day: "2-digit",
+                year: "numeric",
+              }) + "",
+          },
+        ];
       });
     }
     setTask("");
