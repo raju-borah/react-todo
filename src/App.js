@@ -38,12 +38,12 @@ function App() {
           {
             task: todoTask,
             id: Math.random().toString(),
-            date:
-              new Date().toLocaleString("en-US", {
-                month: "long",
-                day: "2-digit",
-                year: "numeric",
-              }) + "",
+            // date:
+            //   new Date().toLocaleString("en-US", {
+            //     month: "long",
+            //     day: "2-digit",
+            //     year: "numeric",
+            //   }) + "",
           },
         ];
       });
